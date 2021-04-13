@@ -39,10 +39,13 @@ def get_arg(arg_):
 
     return {"name" : arg_name, "content" : arg_content_splitted}
 
-Ents = get_entities(File)
 
-for e in Ents:
-    print(f"---> {e}")
-    for a in Ents[e]:
-        b = get_arg(a)
-        print(f"{ b['name'] } ---> { b['content'] }")
+
+if __name__ == "__main__":
+    Ents = get_entities(File)
+
+    for e in Ents:
+        print(f"---> {e}")
+        for a in Ents[e]:
+            b = get_arg(a)
+            print(f"{ b['name'] } ---> { b['content'] }")
